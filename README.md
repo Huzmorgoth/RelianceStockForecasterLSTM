@@ -18,3 +18,8 @@ The cell state is essentially the memory of the network. It carries information 
 Next, the information from the previous hidden state combined with the input is passed through a sigmoid function to again determine important information, and also a tanh function to transform data between -1 and 1. This transformation helps with the stability of the network and helps deal with the vanishing/exploding gradient problem. These 2 outputs are multiplied together, and the output is added to the current cell state with the sigmoid function applied to it to give us our new cell state for the next time step.
 
 Finally, the information from the hidden state combined with the current input are combined and a sigmoid function applied to it. The new cell state is passed through a tanh function to transform the values and both outputs are multiplied to determine the new hidden state for the next time step.
+
+# Code Files
+
+- Screening-analysis-forecast.ipynb: contains the analysis and forecast model training
+- app.py: Flask API deployable model, which takes "future-days" as jason input and perform forecast from the live data of Reliance for the inserted number of future days.
